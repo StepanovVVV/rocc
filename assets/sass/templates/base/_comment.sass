@@ -1,0 +1,37 @@
+.comment
+    &-form
+        display: flex
+        flex-direction: column
+        &-comment
+            order: 4
+        &-email
+            order: 2
+        &-author
+            order: 1
+        &-submit
+            order: 5
+        &-rating
+            order: 3
+    &-author
+        display: flex
+        gap: rem-calc(20)
+        @include respond(small)
+            flex-direction: column
+        img.avatar
+            width: rem-calc(80)
+            height: rem-calc(80)
+    &-content
+        margin-top: rem-calc(15)
+    &-navigation
+        .nav-links
+            display: flex
+            justify-content: space-between
+            gap: rem-calc(20)
+            a
+                font-size: rem-calc(22)
+                font-weight: 400
+                line-height: 1.5
+                color: $color-1
+                transition: all .3s ease 0s
+                &:hover
+                    color: $color-2

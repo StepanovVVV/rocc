@@ -1,0 +1,23 @@
+.tabs
+    &__btns
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        gap: rem-calc(10)
+        @include respond(medium)
+            flex-direction: row
+    &__btn
+        flex: 1 0 auto
+    &__btn 
+        button
+            transition: all .3s ease 0s
+            text-align: center
+    &__items
+        display: flex
+        flex-direction: column
+    &__item
+        display: none
+    &__item
+        &.active
+            display: flex
+            align-items: center

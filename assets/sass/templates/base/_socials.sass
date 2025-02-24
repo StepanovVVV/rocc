@@ -1,0 +1,26 @@
+.socials 
+    display: flex
+    align-items: center
+    gap: rem-calc(24)
+    &-position 
+        justify-content: flex-end
+        @include respond(small)
+            justify-content: center
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        &:hover>i,
+        &:active>i
+            color: $color-4
+            
+        >i
+            font-size: rem-calc(24)
+            transition: all .3s ease 0s
+    &__icon
+        height: rem-calc(16)
+        transition: all .3s ease 0s
+        &:hover
+            opacity: .5
+
+            

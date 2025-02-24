@@ -1,0 +1,45 @@
+.why-us
+    padding-top: rem-calc(90)
+    padding-bottom: rem-calc(95)
+    @include respond(small)
+        padding-top: rem-calc(80)
+        padding-bottom: rem-calc(80)
+    &__container
+        max-width: rem-calc(815)
+        margin-top: rem-calc(46)
+    &__cell
+        display: grid
+        grid-template-columns: repeat(7, auto)
+        justify-items: center
+        grid-template-rows: auto auto auto
+        row-gap: rem-calc(30)
+        @include respond(medium)
+            grid-template-columns: repeat(3, auto)
+        @include respond(small)
+            grid-template-columns: repeat(2, minmax(rem-calc(80), rem-calc(280)))
+        >div:last-child
+            @include respond(medium)
+                grid-column: 1 / -1
+    &__wrap
+        max-width: rem-calc(116)
+        width: 100%
+        padding: rem-calc(0 19)
+        @include respond(small)
+            max-width: 100%
+            padding: unset
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: rem-calc(57)
+        height: rem-calc(57)
+        margin: 0 auto
+        img
+            object-fit: none
+    &__name
+        font-size: rem-calc(13)
+        line-height: 1.29230769231
+        font-weight: 400
+        color: $color-2
+        text-align: center
+        margin-top: rem-calc(20)

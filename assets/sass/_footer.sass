@@ -1,0 +1,71 @@
+.footer
+    background-color: $color-2
+    @include respond(small)
+        padding-top: rem-calc(25)
+    .grid-x
+        row-gap: rem-calc(20)
+        @include respond(small)
+            row-gap: rem-calc(30)
+            flex-direction: column-reverse
+    &__container
+        padding-top: rem-calc(61)
+        padding-bottom: rem-calc(61)
+        @include respond(small)
+            padding-top: rem-calc(40)
+            padding-bottom: rem-calc(40)
+        .cell
+            display: flex
+            align-items: center
+    &__wrap
+        @include respond(medium)
+            margin: 0 auto
+        @include respond(small)
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+    &__logo 
+        display: flex
+        align-items: center
+        width: 100%
+        @include respond(small)
+            margin: unset
+        img
+            max-width: rem-calc(60)
+            width: 100%
+            @include respond(small)
+                margin: 0 auto
+    &__items
+        display: flex
+        gap: rem-calc(24)
+        @include respond(small)
+            flex-direction: column
+    &__item
+        @include respond(small)
+            text-align: center
+    &__link,
+    &__text
+        font-size: rem-calc(12)
+        font-weight: 400
+        line-height: 1.5
+        color: $color-4
+        @include respond(small)
+            text-align: center
+    &__link
+        transition: all .3s ease 0s
+        &:hover
+            color: $color-1
+    &__socials
+        max-width: max-content
+        margin-left: auto
+        @include respond(medium)
+            max-width: 100%
+            margin-left: unset
+        .socials
+            @include respond(small)
+                justify-content: center
+    &__copy
+        font-size: rem-calc(12)
+        font-weight: 400
+        line-height: 1.33333333333
+        color: $color-4
