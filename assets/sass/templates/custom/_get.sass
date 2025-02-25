@@ -1,0 +1,45 @@
+.get
+    padding-top: rem-calc(190)
+    padding-bottom: rem-calc(177)
+    background-color: $color-4
+    @include respond(medium)
+        padding-top: rem-calc(120)
+        padding-bottom: rem-calc(120)
+    @include respond(small)
+        padding-top: rem-calc(80)
+        padding-bottom: rem-calc(80)
+    .grid-x
+        row-gap: rem-calc(40)
+    &__container
+        position: relative
+    &__box
+        position: relative
+        z-index: 2
+    &__title
+        font-size: rem-calc(96)
+        font-weight: 700
+        line-height: 1.04166666667
+        color: $color-2
+        @include respond(large)
+            max-width: rem-calc(320)
+            width: 100%
+        @include respond(medium)
+            max-width: 100%
+            text-align: center
+        @include respond(small)
+            font-size: rem-calc(42)
+    &__btn
+        margin-top: rem-calc(186)
+        @include respond(medium)
+            display: flex
+            justify-content: center
+            margin-top: rem-calc(60)
+    &__img
+        position: absolute
+        top: rem-calc(-50)
+        right: rem-calc(20)
+        max-width: rem-calc(800)
+        width: 100%
+        @include respond(medium)
+            position: static
+            max-width: 100%
