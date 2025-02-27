@@ -1,0 +1,124 @@
+.dropdown-menu
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: -10
+  width: rem-calc(200)
+  background-color: $color-2
+  @include respond(medium)
+    position: static
+    width: 100%
+  &.js-active 
+    display: block
+    height: auto
+
+.menu-item-wrapper 
+  position: relative
+  display: flex
+  width: 100%
+
+.submenu-toggle
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0
+  cursor: pointer
+  padding-left: rem-calc(10)
+  padding-right: rem-calc(10)
+  transition: all .3s ease 0s
+  @include respond(medium) 
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    width: rem-calc(58.11)
+    z-index: 1
+    padding-left: unset
+    padding-right: unset
+    transform: unset
+    background-color: $color-2
+  span
+    display: block
+    height: rem-calc(12)
+    width: rem-calc(12)
+    background-color: $color-4
+    transition: all .3s ease 0s
+    clip-path: polygon(50% 100%, 0 25%, 100% 25%)
+  &.js-active span,
+  &.active-js span
+    transform: scale(1, -1)
+
+.header__item.dropdown > .menu-item-wrapper 
+  padding-right: rem-calc(32)
+  @include respond(medium)
+    padding-right: unset
+  .submenu-toggle
+    transform: translateY(-70%)
+    @include respond(medium)
+      transform: translateY(0%)
+
+.dropstart.open-right > .dropdown-menu.dropdown-menu-end
+  left: 100%
+  top: 0 
+
+.dropstart.open-left > .dropdown-menu.dropdown-menu-end
+  left: auto
+  top: 0
+  right: 100%
+
+
+.menu-item-wrapper.js-active > .dropdown-item,
+.menu-item-wrapper.active-js > .dropdown-item
+  color: $color-2
+  background-color: $color-1
+
+.dropdown-item
+  display: inline-block
+  width: 100%
+  font-size: rem-calc(18)
+  background-color: $color-2
+  color: $color-1
+  padding: rem-calc(10)
+  cursor: pointer
+  transition: all .3s ease 0s
+  padding-right: rem-calc(25)
+  @include respond(medium)
+    font-size: rem-calc(22)
+    text-align: center
+    background-color: $color-1
+  &:hover
+    color: $color-2
+    background-color: $color-1
+
+.header__item.current_page_item > .dropdown-item.active
+  color: $color-2
+  background-color: $color-1
+
+.dropdown-menu.js-active,
+.dropdown-menu.active-js
+    // display: block
+
+.header__link.js-active > .dropdown-menu 
+    // display: block
+
+.dropdown-menu 
+  opacity: 0
+  max-height: 0
+  visibility: hidden
+  top: -1000%
+  @include respond(medium)
+    overflow: hidden
+    display: block
+
+
+.dropdown-menu.js-active,
+.dropdown-menu.active-js
+  max-height: unset
+  opacity: 1
+  visibility: visible
+  z-index: 10
+  top: 100%
+

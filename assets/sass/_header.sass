@@ -1,0 +1,217 @@
+.header
+    background-color: $color-2
+    @include respond(medium)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        z-index: 6
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        height: rem-calc(70)
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            background-color: $color-2
+            z-index: 3
+    &__container
+        display: flex
+        justify-content: space-between
+        position: relative
+        padding: rem-calc(30 15)
+        transition: all .3s ease 0s
+        @include respond(medium)
+            padding: rem-calc(20 15)
+        @include respond(medium)
+            height: 100%
+            align-items: center
+            padding: rem-calc(0 15)
+    &__burger
+        display: none
+        @include respond(medium)
+            display: flex
+            align-items: center
+            justify-content: center
+            width: rem-calc(35)
+            height: rem-calc(30)
+            cursor: pointer
+            position: relative
+            z-index: 4
+            &::after,
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                display: inline-block
+                width: 100%
+                height: rem-calc(3)
+                background-color: $color-1
+                transition: all .3s ease 0s
+            &::after
+                bottom: 0
+            &::before
+                top: 0
+            &.active::after
+                transform: rotate(45deg) translateY(65%)
+                bottom: 50%
+            &.active::before
+                top: 50%
+                transform: rotate(-45deg) translateY(-50%)
+            &.active span
+                opacity: 0
+                visibility: hidden
+            span
+                display: inline-block
+                width: 100%
+                height: rem-calc(3)
+                background-color: $color-1
+                transition: all .3s ease 0s
+    &__logo
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        position: relative
+        z-index: 4
+        width: max-content
+        white-space: nowrap
+        @include respond(medium)
+            margin: unset
+        a
+            display: inline-block
+            max-width: 100%
+            width: 100%
+            img
+                width: rem-calc(100)
+    &__overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: $color-5
+        z-index: 1
+        opacity: 0
+        visibility: hidden
+        transition: all .3s ease 0s
+        &.active
+            @include respond(medium)
+                visibility: visible
+                opacity: 1
+    &__menu
+        display: flex
+        align-items: center
+        width: 100%
+        justify-content: space-between
+        @include respond(medium)
+            align-items: normal
+            flex-direction: column
+            justify-content: flex-start
+            position: absolute
+            top: -10000%
+            left: 0
+            width: 100%
+            height: max-content
+            transition: all .3s ease 0s
+            z-index: 2
+            overflow: scroll
+            height: calc( 100vh - 70px )
+        &.active
+            @include respond(medium)
+                top: rem-calc(70)
+    &__nav
+        margin-left: auto
+        @include respond(medium)
+            position: relative
+            z-index: 2
+            width: 100%
+    &__items
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: rem-calc(0 33)
+        @include respond(medium)
+            flex-direction: column
+    &__item
+        position: relative
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+        gap: rem-calc(12)
+        transition: all .3s ease 0s
+        @include respond(medium)
+            display: block
+            width: 100%
+    &__link
+        display: inline-block
+        font-size: rem-calc(13)
+        font-weight: 600
+        line-height: 1.5
+        padding-bottom: rem-calc(3)
+        color: $color-1
+        transition: all .3s ease 0s
+        position: relative
+        overflow: hidden
+        &:hover
+            color: $color-4
+            @include respond(medium)
+                background-color: $color-2
+                color: $color-4
+            &::after
+                left: 0
+        @include respond(medium)
+            font-size: rem-calc(22)
+            color: $color-2
+            background-color: $color-4
+            width: 100%
+            text-align: center
+            padding: rem-calc(15)
+            overflow: unset
+        &::after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: -100%
+            height: rem-calc(1)
+            width: 100%
+            background-color: $color-4
+            transition: all .3s ease 0s
+            @include respond(medium)
+                display: none
+    &__link.active,
+    .dropdown-item.dropdown-toggle.active
+        color: $color-4
+        &::after
+            left: 0
+    &__item .header__link.dropdown-toggle.js-active,
+    &__item .dropdown-toggle.js-active,
+    &__item .header__link.dropdown-toggle.active-js,
+    &__item .dropdown-toggle.active-js
+        color: $color-4
+        &::after
+            transform: scale(1, -1) translateY(50%)
+            left: 0
+    &__socials
+        margin-top: rem-calc(-4)
+        @include respond(medium)
+            display: flex
+            justify-content: center
+            margin-top: unset
+            padding: rem-calc(20 15)
+            background-color: $color-2
+        .socials__icon
+            @include respond(medium)
+                height: rem-calc(22)
+
+.no-scroll 
+    @include respond(medium)
+        overflow: hidden
+
+.body-top
+    @include respond(medium)
+        margin-top: rem-calc(70)
