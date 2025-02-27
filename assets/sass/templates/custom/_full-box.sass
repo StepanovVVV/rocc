@@ -1,0 +1,45 @@
+.full-box
+    overflow: hidden
+    height: rem-calc(702)
+    @include respond(medium)
+        height: rem-calc(600)
+    @include respond(small)
+        height: rem-calc(400)
+    &__container
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        img
+            height: 100%
+    &__wrap
+        display: flex
+        gap: rem-calc(20)
+        min-width: 200%
+        animation: scrollText 10s linear infinite
+        will-change: transform
+    &__title
+        font-size: rem-calc(110)
+        line-height: 1.5
+        font-weight: 400
+        color: $color-3
+        white-space: nowrap
+        @include respond(medium)
+            font-size: rem-calc(80)
+        @include respond(small)
+            font-size: rem-calc(26)
+
+@keyframes scrollText
+    from 
+        transform: translateX(0) 
+    to 
+        transform: translateX(-100%)
+
+

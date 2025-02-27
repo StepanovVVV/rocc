@@ -1,0 +1,76 @@
+.home-slider
+    position: relative
+    &__wrap
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center 
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        img
+            height: 100%
+            object-position: center 
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, .1)
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        min-height: rem-calc(710)
+        padding-top: rem-calc(245)
+        padding-bottom: rem-calc(50)
+        @include respond(small)
+            min-height: rem-calc(400)
+            padding-top: rem-calc(100)
+    &__logo
+        max-width: rem-calc(410)
+        margin: 0 auto
+        @include respond(small)
+            max-width: rem-calc(240)
+    &__title
+        font-size: rem-calc(57)
+        font-weight: 700
+        line-height: 1.5
+        color: $color-1
+        text-align: center
+        margin: 0 auto
+        margin-top: rem-calc(119)
+        @include respond(small)
+            font-size: rem-calc(38)
+            margin-top: rem-calc(60)
+    .slick-dots
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: rem-calc(10)
+        position: absolute
+        bottom: rem-calc(20)
+        width: 100%
+        >li
+            position: relative
+            cursor: pointer
+            width: rem-calc(8)
+            height: rem-calc(8)
+            border-radius: 50%
+            background-color: $color-2
+            transition: all .3s ease 0s
+            &:hover
+                background-color: $color-5
+            >button
+                font-size: 0
+        >li.slick-active
+            width: rem-calc(18)
+            border-radius: rem-calc(3)
+            &:hover
+                background-color: $color-2
