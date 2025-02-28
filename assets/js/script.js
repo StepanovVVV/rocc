@@ -195,32 +195,6 @@ $(document).ready(function () {
         ]
     });
 
-    // Btn for scroll up 
-    document.addEventListener('DOMContentLoaded', function () {
-        const scrollUpButton = document.querySelector('.scroll-up');
-
-        function toggleScrollUpButton() {
-            if (window.scrollY > 100) {
-                scrollUpButton.classList.add('show');
-            } else {
-                scrollUpButton.classList.remove('show');
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        toggleScrollUpButton();
-
-        window.addEventListener('scroll', toggleScrollUpButton);
-
-        scrollUpButton.addEventListener('click', scrollToTop);
-    });
-
     document.addEventListener("DOMContentLoaded", function () {
         const wrap = document.querySelector('.full-box__wrap');
         const text = wrap.querySelector('.full-box__title');
@@ -290,6 +264,32 @@ menuLinks.forEach(link => {
         }
     });
 });
+
+// Btn for scroll up 
+    document.addEventListener('DOMContentLoaded', function () {
+        const scrollUpButton = document.querySelector('.scroll-up');
+
+        function toggleScrollUpButton() {
+            if (window.scrollY > 100) {
+                scrollUpButton.classList.add('show');
+            } else {
+                scrollUpButton.classList.remove('show');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        toggleScrollUpButton();
+
+        window.addEventListener('scroll', toggleScrollUpButton);
+
+        scrollUpButton.addEventListener('click', scrollToTop);
+    });
 
 // Accordion
 $(function () {
