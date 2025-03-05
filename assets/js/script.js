@@ -380,5 +380,5 @@ document.addEventListener('DOMContentLoaded', function () {
 function redirectToThankYouPage(event) {
     event.preventDefault();
 
-    window.location.href = './thank-you.html'; // onclick="redirectToThankYouPage(event)"
+    window.location.href = '/rocc/thank-you.html'; // onclick="redirectToThankYouPage(event)"
 }
