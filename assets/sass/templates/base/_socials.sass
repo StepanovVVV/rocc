@@ -1,0 +1,29 @@
+.socials 
+    display: flex
+    align-items: center
+    gap: rem-calc(18)
+    &-position 
+        justify-content: flex-end
+        @include respond(small)
+            justify-content: center
+    &__link
+        display: flex
+        align-items: center
+        justify-content: center
+        width: rem-calc(20)
+        height: rem-calc(20)
+        &:hover>i,
+        &:active>i
+            color: $color-4
+            
+        >i
+            font-size: rem-calc(20)
+            transition: all .3s ease 0s
+    &__icon
+        object-fit: contain
+        height: 100%
+        transition: all .3s ease 0s
+        &:hover
+            opacity: .5
+
+            

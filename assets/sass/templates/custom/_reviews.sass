@@ -1,0 +1,29 @@
+.reviews
+    padding-top: rem-calc(136)
+    padding-bottom: rem-calc(136)
+    @include respond(medium)
+        padding-top: rem-calc(100)
+        padding-bottom: rem-calc(100)
+    @include respond(small)
+        padding-top: rem-calc(80)
+        padding-bottom: rem-calc(80)
+    &__container
+        max-width: rem-calc(1366)
+    &__wrap
+        max-width: rem-calc(310)
+        width: 100%
+        margin: 0 auto
+        text-align: center
+        padding: 0 rem-calc(15)
+    &__name,
+    &__text
+        font-size: rem-calc(13)
+        font-weight: 400
+        line-height: 1.38461538462
+        color: $color-2
+    &__name
+        margin-top: rem-calc(33)
+    &__text
+        margin-top: rem-calc(18)
+    &__slider > *:not(:first-child) 
+        display: none

@@ -1,0 +1,76 @@
+.works
+    padding: rem-calc(90 15 90)
+    background-color: $color-2
+    @include respond(medium)   
+        padding: rem-calc(60 15 60)
+    &__title
+        color: $color-1
+    &__tabs
+        margin-top: rem-calc(40)
+        @include respond(medium)  
+            margin-top: rem-calc(30)
+    &__container
+        max-width: rem-calc(900)
+        border-radius: rem-calc(3)
+        border: rem-calc(2) solid $color-1
+        padding-top: rem-calc(15)
+        padding-bottom: rem-calc(15)
+        .cell
+            display: flex
+            align-items: center
+        .tabs
+            &__items
+                height: rem-calc(320)
+                width: 100%
+            &__item
+                width: 100%
+            &__btns
+                margin: 0 auto
+            &__btn
+                button
+                    font-size: rem-calc(16)
+                    font-weight: 700
+                    color: $color-2
+                    background-color: $color-4
+                    padding: rem-calc(10 20)
+                    width: 100%
+                    border-radius: rem-calc(3)
+                    &:hover
+                        background-color: $color-1
+                &.active
+                    button
+                        background-color: $color-1
+            &__img
+                height: rem-calc(320)
+                img
+                    height: 100%
+                    max-width: rem-calc(580)
+                    width: 100%
+                    @include respond(medium)
+                        max-width: 100%
+            &__items
+                width: 100%
+            &__item
+                // position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background-color: $color-7
+            &__info
+                font-size: rem-calc(16)
+                font-weight: 700
+                line-height: 1.5
+                color: $color-1
+                text-transform: uppercase
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 100%
+                text-align: center
+                padding: 0 rem-calc(10)
+                z-index: 1
