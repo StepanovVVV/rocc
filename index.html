@@ -766,15 +766,15 @@
             <div class="popup__wrapper">
                 <span class="popup__close">×</span>
                 <div class="popup__content">
-                    <h3 class="popup__title"><?php echo __('Contact us now', 'custom-theme'); ?></h3>
-                    <p class="popup__info"><?php echo __('Our manager will contact you as soon as possible.', 'custom-theme'); ?></p>
+                    <h3 class="popup__title">Contact us now</h3>
+                    <p class="popup__info">Our manager will contact you as soon as possible.</p>
                 </div>
                 <div class="popup__form">
-                    <form action="<?php echo esc_url( get_template_directory_uri() . '/process_form.php' ); ?>" method="post" class="form">
+                    <form action="/process_form.php" method="post" class="form">
                         <input type="text" id="name-2" name="name" placeholder="Name" required autocomplete="off" class="form__input">
                         <input type="tel" id="phone-2" name="phone" required placeholder="Phone Number" autocomplete="off" class="form__input phone">
                         <div class="form__btn btn">
-                            <button type="submit" class="btn__wrap"><?php echo __('Subscribe', 'custom-theme'); ?></button>
+                            <button type="submit" class="btn__wrap">Subscribe</button>
                         </div>
                     </form>
                 </div>
