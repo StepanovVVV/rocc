@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
     // Fancybox
-     $('[data-fancybox]').fancybox({
+    $('[data-fancybox]').fancybox({
         buttons: [
             "zoom",
             "slideShow",
@@ -139,7 +139,7 @@ $(document).ready(function () {
         protect: true,
         touch: false
     });
-    
+
     $(document).on('click', '.popup__close', function () {
         $.fancybox.close();
     });
